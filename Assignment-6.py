@@ -20,6 +20,11 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor 
 from sklearn.metrics import  mean_squared_error
 import numpy as np
+from keras.models import Sequential
+from keras.layers import Dense
+import numpy as np
+
+
 
 
 df_path = "C:\ASM exam\cds_spread5y_2001_2016.dta"
@@ -29,7 +34,6 @@ data = pd.io.stata.read_stata("C:\ASM exam\cds_spread5y_2001_2016.dta")
 data.to_csv('my_stata_file.csv')
 
 
-# In[52]:
 
 
 cdsdata = pd.read_csv('my_stata_file.csv',
@@ -220,22 +224,5 @@ Y_pred = model.predict(X_test_NewFt)
 mape=mean_absolute_percentage_error(y_test,Y_pred)
 
 mape
-
-
-# In[6]:
-
-
-
-
-
-# In[7]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
